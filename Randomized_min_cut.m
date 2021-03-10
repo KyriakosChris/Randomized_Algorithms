@@ -1,14 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % M file for testing the randomized min-cut algorithm             %
 %                                                                 %
-% A. P. Liavas, Feb. 25, 2015, March 1, 2021                      %
+% K.Christodoulidis, March 9, 2021                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear, clc
 
 % Number of nodes
 n = 500;
-min_cut_weight = 100;
+min_cut_weight = n/5;
 
 A = generate_adjacency_matrix(n, min_cut_weight);
 
@@ -23,7 +23,6 @@ for iter=1:10 % Repeat the whole process
     inner_iter = 0;
     found = 0;
     while (found == 0)
-        
         inner_iter = inner_iter + 1; 
       
         % Randomized min-cut algorithm 
