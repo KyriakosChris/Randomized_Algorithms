@@ -1,11 +1,4 @@
 function [A_updated] = update_adjacency_matrix(A, i1, i2)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [A_updated] = update_adjacency_matrix(A, i1, i2)            %
-%                                                             %
-% Contract edge (i1, i2)                                      %
-%                                                             %
-% A. P. Liavas, Febr. 26, 2015                                %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 [m, n] = size(A);
 
