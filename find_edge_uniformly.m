@@ -1,12 +1,4 @@
 function [u, v] = find_edge_uniformly(A)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [u, v] = find_edge_uniformly(A)          %
-%                                          %
-% (u,v) edge selected uniformly at random  %
-% from the edges of adjacency matrix A     %
-%                                          %
-% A. P. Liavas, Febr. 26, 2015             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 [m, n] = size(A);
 
