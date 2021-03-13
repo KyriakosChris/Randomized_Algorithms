@@ -12,7 +12,7 @@ min_cut_weight = n/5;
 
 A = generate_adjacency_matrix(n, min_cut_weight);
 
-for iter=1:10 % Repeat the whole process 
+for iter=1:100 % Repeat the whole process 
     
     iter 
     
@@ -54,6 +54,8 @@ for iter=1:10 % Repeat the whole process
     end
     iters(iter) = inner_iter;
 end
-
 a = hist(iters, [1:max(iters)]);
 bar(a/iter)
+title('Histogram')
+ylabel('Possibility')
+xlabel('Number of Iterations')
