@@ -8,7 +8,8 @@ x = 1:n;    %create a vector of all nums 1 -> couponnum
 T = zeros(1,ceil(m)); %create a vector of zeros which will track the steps till completion
 random = zeros(1,m);
 for l = 1:m 
-    disp(l)
+    X = ['Simulation: ',num2str(l)];
+    disp(X)
     j = 0; %sets j = 0 at the start of each new repeat
     y = zeros(1,n); %creates a vector of 0's for each new repeat
     while sum(x)~= sum(y)
@@ -27,10 +28,9 @@ for l = 1:m
 end
 T_mean = sum(T)/length(T); %calculates the mean
 R_mean = sum(random)/length(random); %calculates the mean
-disp(T_mean)
+X = ['Average Repetition: ',num2str(T_mean)];
+disp(X)
 histogram(T)
-% a = hist(T, [1:max(T)]);
-% bar(a/m)
 title('Histogram')
 ylabel('Possibility')
 xlabel('Number of Repetitions')
