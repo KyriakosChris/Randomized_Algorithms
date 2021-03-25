@@ -1,18 +1,5 @@
-clear all;
-close all;
-clc
-
-n=1000;
-simulations= 100;
-global counter
-counter=zeros(1,simulations);
-
-    X = ['Simulation: ',num2str(1)];
-    disp(X)
-    A=randi(n,1,n); % create an array with n random numbers 
-    [m,B] = Median(A);
-    
- function [element,counter] = Median(x)
+function [element,counter] = RandomizedMedian(x)
+    % loop until we have a success
     while 1
         n=length(x);
         y= power(n,0.75);   %n^3/4  
@@ -41,7 +28,7 @@ counter=zeros(1,simulations);
         lu(lu==0) = [];
         ld(ld==0) = [];
         C(C==0) = [];
-        if((length(ld)>n/2 || length(lu)>n/2) && length(C)> 4*y)
+        if(length(ld)>n/2 || length(lu)>n/2 || length(C)> 4*y)
             disp('FAIL');
             continue;
         end
