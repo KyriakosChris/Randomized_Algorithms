@@ -2,12 +2,12 @@ clear all;
 close all;
 clc
 
-n =100; %input number of coupons
-m = n*log10(n); %input amount of repeats 
+n =1000; %input number of coupons
+simulations = 100; %input amount of repeats 
 x = 1:n;    %create a vector of all nums 1 -> couponnum
-T = zeros(1,ceil(m)); %create a vector of zeros which will track the steps till completion
-random = zeros(1,m);
-for l = 1:m 
+T = zeros(1,ceil(simulations)); %create a vector of zeros which will track the steps till completion
+random = zeros(1,simulations);
+for l = 1:simulations 
     X = ['Simulation: ',num2str(l)];
     disp(X)
     j = 0; %sets j = 0 at the start of each new repeat

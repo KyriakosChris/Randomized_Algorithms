@@ -3,8 +3,6 @@ function [list,c] = quicksortAndCount(A)
     count=0;
     list = quicksort(A);
     c=count;
-
-
 end
 
 function [y] = quicksort(x)
